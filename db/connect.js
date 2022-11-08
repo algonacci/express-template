@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const connectDB = (URL) => {
   return mongoose
     .connect(URL)
-    .then(() => console.log("💽 [DATABASE] Connected to MongoDB!"))
+    .then(() => console.log("💽 [DATABASE] SUCCESS Connected to MongoDB!"))
     .catch((error) =>
-      console.log(`Error connecting to MongoDB!, because ${error}`)
+      console.log(`⚠️ [ERROR], Error connecting to MongoDB!, because ${error}`)
     );
 };
 
