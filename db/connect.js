@@ -4,8 +4,10 @@ const connectDB = (URL) => {
   return mongoose
     .connect(URL)
     .then(() => console.log("💽 [DATABASE] SUCCESS Connected to MongoDB!"))
-    .catch((error) =>
+    .catch((error) => {
       console.log(`⚠️ [ERROR], Error connecting to MongoDB!, because ${error}`)
+      process.exit(1)
+    }
     );
 };
 
